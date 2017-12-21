@@ -26,9 +26,9 @@ open class RealmObservable<T: Object>: RequestObservable<T> {
             realmObjects = realmObjects.filter(predicate)
         }
         if let sortDescriptor = self.request.sortDescriptor {
-            realmObjects = realmObjects.sorted(byProperty: sortDescriptor.key!, ascending: sortDescriptor.ascending)
+            realmObjects = realmObjects.sorted(byKeyPath: sortDescriptor.key!, ascending: sortDescriptor.ascending)
         }
-        self.notificationToken = realmObjects.addNotificationBlock { (changes: RealmCollectionChange<Results<T>>) in
+        self.notificationToken = realmObjects.observe { (changes: RealmCollectionChange<Results<T>>) in
             closure(self.map(changes))
         }
     }
@@ -45,7 +45,7 @@ open class RealmObservable<T: Object>: RequestObservable<T> {
         case .error(let error):
             return ObservableChange.error(error)
         case .initial(let initial):
-            return ObservableChange.initial(initial.toArray())
+            return ObservableChange.initial(Array(initial))
         case .update(let objects, let deletions, let insertions, let modifications):
             let deletions = deletions.map { $0 }
             let insertions = insertions.map { (index: $0, element: objects[$0]) }
