@@ -580,7 +580,6 @@
 				607FACCD1AFB9204008FA782 /* Frameworks */,
 				607FACCE1AFB9204008FA782 /* Resources */,
 				5CC50519DB34147A00106131 /* [CP] Embed Pods Frameworks */,
-				A8B8DCCFD7667D0B80C5AF17 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -600,7 +599,6 @@
 				607FACE21AFB9204008FA782 /* Frameworks */,
 				607FACE31AFB9204008FA782 /* Resources */,
 				FE8764C997ACB32CEF47985C /* [CP] Embed Pods Frameworks */,
-				A8EAB62C7C1162F4D92E413F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -713,36 +711,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SugarRecord_Example/Pods-SugarRecord_Example-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		A8B8DCCFD7667D0B80C5AF17 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SugarRecord_Example/Pods-SugarRecord_Example-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		A8EAB62C7C1162F4D92E413F /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SugarRecord_Tests/Pods-SugarRecord_Tests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		C80BC0F277849B3F17D1036F /* [CP] Check Pods Manifest.lock */ = {
